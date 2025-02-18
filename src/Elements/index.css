@@ -697,7 +697,7 @@ span :hover{
     max-width: 75%;
     text-align: justify;
     @media(max-width:786px) {
-            max-width: 90%;
+            max-width: 90%
         }
 }
 .toolslist{
