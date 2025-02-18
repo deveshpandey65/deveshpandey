@@ -8,7 +8,6 @@ export default function
 
   return (
     <> 
-    <Nav/>
     <div className='project'>
         {project.map((project) => (
           <Link

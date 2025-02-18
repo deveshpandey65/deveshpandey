@@ -4,7 +4,6 @@ import Nav from './Nav'
 export default function Contact() {
   return (
     <>
-    <Nav/>
     <div className="contact-form">
         <h2>Get in Touch</h2>
         <form>

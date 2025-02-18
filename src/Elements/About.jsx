@@ -52,7 +52,6 @@ export default function About() {
     return (
         <>
             {loading ?<Loading/>: <>
-            <Nav/>
             <div className="header1">
                 <div className="side11">
                     <div className="header1-content">

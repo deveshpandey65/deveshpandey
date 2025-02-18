@@ -30,7 +30,6 @@ export default function App() {
   return (
     <div className="App">
       {loading ?<Loading/>: <> 
-        <Nav />
         <Header />
         <Intro/>
         <PinnedProject/>
