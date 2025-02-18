@@ -23,7 +23,7 @@ export default function ProjectDesc() {
   return (
     <div className="projectdesc">
       <div className="project-image-container">
-        <img src={selectedProject.image} alt={selectedProject.name} />
+        <img id='proimg' src={selectedProject.image} alt={selectedProject.name} />
         <div className="overlay">
           <div className="overlay-content">
             <h1>{selectedProject.name}</h1>

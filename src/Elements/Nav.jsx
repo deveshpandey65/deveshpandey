@@ -14,7 +14,7 @@ export default function Nav() {
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/projects">Projects</Link>
-        <a href="#services">Coding Profiles</a>
+        <Link to ="/codingprofiles">Coding Profiles</Link>
       </div>
     </div>
   );

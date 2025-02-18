@@ -2,7 +2,10 @@ import React, { useRef, useState, useEffect } from 'react';
 import './index.css';
 
 import personimg from '../assests/img/pperson.png'
+
+import { useNavigate } from 'react-router-dom';
 export default function Intro() {
+    const navigate=useNavigate()
     const imgRef = useRef(null);
 
     const handleMouseMove = (e) => {
@@ -27,6 +30,9 @@ export default function Intro() {
             imgRef.current.style.transform = `translate(0, 0)`;
         }
     };
+    function handleClick() {
+        navigate('/contact');
+    }
     return (
         <div className="header">
             <div className='side1'>
@@ -44,7 +50,7 @@ export default function Intro() {
                     <p style={{ fontSize: '20px', color: 'black' }}>    I actively participate in hackathons and competitive programming, securing 3rd place at Cohort 1.0 (MNNIT) and 4th place at U Hack 2.0. I am also proficient in Python, C, and JavaScript, with a 5-star rating in Python on HackerRank and over 140+ problems solved on LeetCode.
                     </p>
                     <div className='contact-btn'>
-                        <button className='btn'>Contact Me</button>
+                        <button onClick={handleClick} className='btn'>Contact Me</button>
                     </div>
                 </div>
             </div>

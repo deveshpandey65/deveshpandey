@@ -65,9 +65,8 @@
     margin-bottom: 8%;
     margin-top: 5%;
     width: 100%;
-    background-color: white;
     color: #000;
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
             flex-direction:column-reverse;
         }
 }
@@ -137,6 +136,7 @@
     font-size: 80px;
     @media (max-width: 768px) {
             font-size: 70px;
+            font-family:Impact;
             
         }
 }
@@ -146,7 +146,8 @@
 
     font-size: 30px;
     @media (max-width: 768px) {
-            font-size:20px
+            font-size:20px;
+            font-family: Impact;
         }
 }
 
@@ -183,6 +184,7 @@
     border: none;
     transition: transform 0.3s ease;
     @media (max-width: 768px) {
+        font-family: Impact;
             padding: 10px;
             font-size: 20px;
         }
@@ -238,6 +240,9 @@ transition: transform 0.6s ease;
     align-items: center;
     flex-wrap: wrap;
     font-family: cursive;
+    @media(max-width: 786px){
+        font-family: Impact;
+    }
 }
 .skills .skill-grid{
     display: flex;
@@ -260,7 +265,8 @@ transition: transform 0.6s ease;
     width: 190px;
     height: 150px;
     border-radius: 20px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     justify-content: center;
     align-items: center;
     transition: transform 0.9s ease;
@@ -271,8 +277,7 @@ transition: transform 0.6s ease;
 
 }
 .skills .skill-grid .skill:hover {
-    transform: scale(1.12);
-    margin:10px;
+    transform: scale(1.17);
     @media (max-width: 768px) {
             margin:15px
         }
@@ -370,6 +375,7 @@ span :hover{
 
     @media (max-width: 768px) {
         font-size: 30px;
+        font-family: Impact;
 
     }
 }
@@ -379,7 +385,8 @@ span :hover{
     font-size: 20px;
 
     @media (max-width: 768px) {
-        font-size: 15px
+        font-size: 15px;
+        font-family: Impact;
     }
 }
 
@@ -419,6 +426,7 @@ span :hover{
     transition: transform 0.3s ease;
 
     @media (max-width: 768px) {
+    font-family: Impact;
         padding: 10px;
         font-size: 20px;
     }
@@ -517,18 +525,42 @@ span :hover{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     font-family:cursive;
+    @media(max-width:786px){
+    font-family: Impact;
+    }
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    @media(max-width:786px){
+        padding: 10px;
+        width: 90%;
+    }
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0)
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    @media(max-width: 786px){
+        width: 80%;
+
+    }
 }
 
 .contact-form input {
@@ -537,29 +569,25 @@ span :hover{
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 10px;
 }
-
 .contact-form textarea {
-    width: 100%;
+    max-width: 400px;
     padding: 10px;
+    height: 100px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    @media(max-width: 786px){
+        max-width: 97%;
+    }
 }
 
-.contact-form textarea:after {
-    background-color: #4CAF50;
+.contact-form textarea:hover , .contact-form input:hover {
+    background-color: #b6bab699;
 }
 
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0)
-}
 
 .contact-form button[type="submit"] {
     padding: 10px;
@@ -580,20 +608,27 @@ span :hover{
     font-family: cursive;
     width: 100%;
     background-color: #e8e0e0b4;
+    @media(max-width:786px){
+    font-family: Impact;
+    }
 }
 
 .project-image-container {
     position: relative;
     width: 95%;
     max-width: 95%;
-    /* Adjust as needed */
+
 }
 
-.project-image-container img {
+.project-image-container img[id='proimg'] {
     width: 100%;
     height: 100%;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
     display: block;
+    @media(max-width:786px) {
+            width: 100%;
+            height: 500px;
+        }
 }
 
 .overlay {
@@ -602,9 +637,13 @@ span :hover{
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
+    @media(max-width:786px) {
+            width: 100%;
+            height: fit-content;
+        }
+    
 }
 
-/* Using sticky so that when scrolling within the container, the overlay remains visible */
 .overlay-content {
     position: sticky;
     bottom: 0;
@@ -614,10 +653,17 @@ span :hover{
 }
 .overlay-content h1 {
     margin: 0px;
+    @media(max-width:786px) {
+        font-size: 30px;
+    }
+    
 }
 .overlay-content h2{
     font-weight: lighter;
     margin: 2px;
+    @media(max-width:786px) {
+            font-size: 20px;
+        }
 }
 
 .projectdesc-btn {
@@ -648,8 +694,11 @@ span :hover{
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
-    max-width: 800px;
+    max-width: 75%;
     text-align: justify;
+    @media(max-width:786px) {
+            max-width: 90%;
+        }
 }
 .toolslist{
     display: flex;
@@ -662,4 +711,63 @@ span :hover{
     box-shadow: none;
     width: 50px;
     margin: 10px;
+    
+}
+.project1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.project1 .project1-item {
+    height: 300px;
+    width: 40%;
+    overflow: hidden;
+    border: 2px solid #e4e7e7;
+    margin: 15px;
+    border-radius: 20px;
+    position: relative;
+    transition: transform 0.9s ease;
+    cursor: pointer;
+    @media(max-width:786px) {
+        width: 100%;
+    }
+}
+
+.project1 .project1-item img:hover {
+    transform: scale(1.5);
+    opacity: .4;
+}
+
+.project1 .project1-item img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    transition: transform 0.9s ease;
+    display: flex;
+}
+
+.project1 .project1-item .project1-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    background: rgba(110, 106, 106, 0.142);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.9s ease -in -out;
+}
+
+.project1 .project1-item .project1-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.project1 .project1-item:hover .project1-info {
+    opacity: 1;
 }

@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 export default function PinnedProject() {
   return (
     <div className='pinned-project'>
-          <h1> Pinned Projects</h1>
+          <h1 style={{alignSelf:'center'}}> Pinned Projects</h1>
           <div className='project' >
               {project.map((project) => (
                   project.category != 'pinned' ? '' : <Link 

@@ -7,7 +7,8 @@ import About from './Elements/About';
 import Projects from './Elements/Projects';
 import ProjectDesc from './Elements/ProjectDesc';
 import Contact from './Elements/Contact';
-import Nav from './Elements/Nav'; // Adjust the path as needed
+import Nav from './Elements/Nav'; 
+import Coding from './Elements/Coding';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
         <Route path="/projects" element={<Projects />} />
         <Route path="/projectdesc/:projectName" element={<ProjectDesc />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path='/codingprofiles' element={<Coding />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

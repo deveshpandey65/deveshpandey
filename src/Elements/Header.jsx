@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './index.css';
 import personimg from '../assests/img/person.png';
-
+import resume from '../assests/img/Devesh_Pandey_Resume.pdf';
 export default function Header() {
     const imgRef = useRef(null);
     const roles = ["Ex. SDE Intern","LeetCode: 140+ Questions Solved","Frontend Developer", "Backend Developer", "Fullstack Developer"];
@@ -55,6 +55,10 @@ export default function Header() {
             imgRef.current.style.transform = `translate(0, 0)`;
         }
     };
+    function handleClick() {
+        window.location.href=`${resume}`
+        
+    }
 
     return (
         <div className="header">
@@ -69,7 +73,7 @@ export default function Header() {
                         <span className="cursor">|</span>
                     </p>
                     <div className="contact-btn">
-                        <button className="btn">Download Resume</button>
+                        <button onClick={handleClick} className="btn">Download Resume</button>
                     </div>
                 </div>
             </div>
