@@ -7,7 +7,7 @@ import About from './Elements/About';
 import Projects from './Elements/Projects';
 import ProjectDesc from './Elements/ProjectDesc';
 import Contact from './Elements/Contact';
-import Nav from './Components/Nav'; // Adjust the path as needed
+import Nav from './Elements/Nav'; // Adjust the path as needed
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
