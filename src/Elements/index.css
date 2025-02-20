@@ -573,6 +573,7 @@ span :hover{
 }
 .contact-form textarea {
     max-width: 400px;
+    min-width: 300px;
     padding: 10px;
     height: 100px;
     margin-top: 10px;
@@ -581,6 +582,7 @@ span :hover{
     border-radius: 5px;
     @media(max-width: 786px){
         max-width: 97%;
+        min-width: 80%;
     }
 }
 

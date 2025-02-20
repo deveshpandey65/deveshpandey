@@ -1,30 +1,83 @@
-import React, { useState } from 'react'
-import Nav from './Nav'
-export default function Contact() {
+import React, { useState } from 'react';
+import Nav from './Nav';
+import axios from 'axios';
 
-  const [name, setname] = useState('')
-  const [email, setemail] = useState('')
-  const [message, setmessage] = useState('')
-  const handleClick=()=>{
-    window.location.href =`mailto:dp.devesh65@gmail.com,${email}?subject=portfolio contact ${email}&body=Your Send Message :${message}`
-  }
+export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus('');
+
+    try {
+      const response = await axios.post('https://maild.netlify.app/api/mail', {
+        to: email,
+        subject: 'From Portfolio',
+        text: `Name: ${name}\n\nMessage: ${message}`
+      });
+
+      console.log(response.data);
+      setStatus('Message sent successfully! ✅');
+      alert('Message Sent successfully')
+    } catch (error) {
+      console.error(error);
+      setStatus('Failed to send message. ❌');
+    } finally {
+      setLoading(false);
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
+  };
+
   return (
     <>
-    <div className="contact-form">
+      <div className="contact-form">
         <h2>Get in Touch</h2>
-        <form onSubmit={handleClick}>
-            <label for="name">Name:</label>
-            <input type="text" value={name} onChange={(e)=>setname(e.target.value)} id="name" name="name" placeholder='Enter your name' required/>
-            <br/>
-            <label for="email">Email:</label>
-          <input type="email" value={email} onChange={(e) => setemail(e.target.value)} id="email" name="email" placeholder='Enter your email' required/>
-            <br/>
-            <label for="message">Message:</label>
-          <textarea id="message" value={message} onChange={(e) => setmessage(e.target.value)} name="message" placeholder='Enter your message' required/>
-            <br/>
-            <input type="submit" value="Send"/>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+          <br />
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <br />
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            name="message"
+            placeholder="Enter your message"
+            required
+          />
+          <br />
+          <button type="submit" disabled={loading}>
+            {loading ? 'Sending...' : 'Send'}
+          </button>
         </form>
-    </div>
+        {status && <p>{status}</p>}
+      </div>
     </>
-  )
+  );
 }
