@@ -1,14 +1,34 @@
 
 import thinklay from '../assests/img/thinklay.png';
-import internshala from '../assests/img/stonepapper.png';
+import internshala from '../assests/img/Internshala.png';
 import flipkartclone from '../assests/img/flipkartclone.png';
 import envatomarket from '../assests/img/envatomarket.png';
 import urlshorter from '../assests/img/urlshorter.png';
 import movieapp from '../assests/img/movieapp.png';
 import travellapp from '../assests/img/travellapp.png';
 import todolist from '../assests/img/todolist.png';
-
+import dChats from '../assests/img/dChats.png';
 const project = [
+    {
+        id: 0,
+        name: "dChats",
+        image: dChats,
+        category: 'pinned',
+        github: 'https://github.com/deveshpandey65/dchats',
+        deployed: 'https://deveshpandey65.github.io/dchats/',
+        desc: 'dChats is a real-time chat application built using the MERN stack with WebSocket-based instant messaging. It features secure user authentication with JWT and bcrypt, real-time message synchronization using Socket.io and Ably, and efficient media storage with Cloudinary. The app supports friend requests, private and group chats, read receipts, and online/offline status tracking. Redis is integrated for caching and performance optimization, reducing database queries for frequently accessed data. The UI is built with React and Tailwind CSS, ensuring a smooth user experience with responsive design and dark mode support.',
+        toolsused: [
+            { name: 'MongoDB', imglink: 'https://miro.medium.com/v2/resize:fit:512/1*doAg1_fMQKWFoub-6gwUiQ.png' },
+            { name: 'Express.js', imglink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKmtAv2G_LoVvYzVphgkaW6W1yj3z0tR7igw&s' },
+            { name: 'React.js', imglink: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
+            { name: 'Node.js', imglink: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg' },
+            { name: 'Socket.io', imglink: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Socket-io.svg' },
+            { name: 'Redis', imglink: 'https://upload.wikimedia.org/wikipedia/en/6/6b/Redis_Logo.svg' },
+            { name: 'Cloudinary', imglink: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Cloudinary_logo.svg/2560px-Cloudinary_logo.svg.png' },
+            { name: 'JWT', imglink: 'https://cdn.worldvectorlogo.com/logos/jwt-3.svg' }
+        ],
+        techstack: 'MERN Stack, WebSocket, Socket.io, Redis, Ably, Cloudinary, bcrypt, JWT, Tailwind CSS'
+    },
     
     {
         id: 3,
@@ -30,7 +50,7 @@ const project = [
         deployed: 'https://deveshpandey65.github.io/envatomarket/',
         desc: 'Implemented a fluid simulation effect using the WebGL-Fluid library, enhancing user interaction. This project showcases advanced front-end animation techniques in a dynamic web environment.',
         toolsused: [{ name: 'React.js', imglink: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' }, { name: 'WebGL', imglink: 'https://upload.wikimedia.org/wikipedia/commons/2/25/WebGL_Logo.svg' }],
-        techstack: 'MERN STACK, WebGL'
+        techstack: 'React, WebGL'
     },
     {
         id: 5,
